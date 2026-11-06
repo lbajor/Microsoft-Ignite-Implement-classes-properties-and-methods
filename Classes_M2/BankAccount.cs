@@ -5,12 +5,13 @@ namespace Classes_M2;
 public class BankAccount
 {
     private static int s_nextAccountNumber;
-    public readonly int AccountNumber;
-    public double Balance = 0;
+    public int AccountNumber { get; }
     public static double InterestRate;
-    public string AccountType = "Checking";
-    public readonly string CustomerId;
+    public string CustomerId { get; }
 
+    public double Balance { get; set; } = 0;    
+    public string AccountType { get; set; } = "Checking";
+    
     static BankAccount()
     {
         Random random = new Random();

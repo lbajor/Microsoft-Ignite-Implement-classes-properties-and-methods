@@ -5,9 +5,21 @@ namespace Classes_M2;
 public class BankCustomer
 {
     private static int s_nextCustomerId;
-    public string FirstName = "Tim";
-    public string LastName = "Shao";
+    private string _firstName = "Tim";
+    private string _lastName = "Shao";
     public readonly string CustomerId;
+
+    public string FirstName
+    {
+        get { return _firstName; }
+        set { _firstName = value; }
+    }
+
+    public string LastName
+    {
+        get { return _lastName; }
+        set { _lastName = value; }
+    }
 
     static BankCustomer()
     {
